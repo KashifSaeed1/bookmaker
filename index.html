@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmarker</title>
+  <!-- Start FontAwesome -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <!-- Start BootStrap  -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- Start Main Stylesheet  -->
+  <link rel="stylesheet" href="./css/mainStyle.css">
+</head>
+<body>
+  
+<main class="vh-100 py-5 bg-main">
+  <section>
+    <div class="container text-center">
+    <h1 class="py-2">Bookmarker</h1>
+    <div class="bookmark-body p-3 py-4 mt-5">
+      <h2>
+        <i class="fa-solid fa-bookmark"></i>
+        Bookmark your favorite sites
+        <i class="fa-solid fa-bookmark"></i>
+      </h2>
+      <div class="text-start mb-3">
+        <label class="pb-2 fw-semibold" for="siteName">
+          <i class="fa-solid fa-book-bookmark pe-2 text"></i>
+          Site Name
+        </label>
+        <input placeholder="Bookmark Name" class="form-control" id="siteName" type="text">
+      </div>
+      <div class="text-start mb-3">
+        <label class="pb-2 fw-semibold" for="siteURL">
+          <i class="fa-solid fa-link pe-2"></i>
+          Site URL
+        </label>
+        <input placeholder="Website URL" class="form-control" id="siteURL" type="url">
+      </div>
+      <button class="btn btn-danger px-5" id="submitBtn">Submit</button>
+    </div>
+    <table class="table mt-4 text-center bg-light">
+      <thead>
+        <tr>
+          <th class="text-capitalize">index</th>
+          <th class="text-capitalize">Website Name</th>
+          <th class="text-capitalize">Visit</th>
+          <th class="text-capitalize">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
+    </div>
+  </section>
+  <section id="validitionAlert" class="d-none z-1 box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center">
+    <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+      <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+        <div class="circles d-flex">
+          <span class="rounded-circle me-2"></span>
+          <span class="rounded-circle me-2"></span>
+          <span class="rounded-circle me-2"></span>
+        </div>
+        <button class="btn border-0" id="closeBtn">
+          <i class="fa-solid fa-xmark close fs-3"></i>
+        </button>
+      </header>
+      <p class="m-0 pb-2 fontFamily-pacifo">
+        Site Name or Url is not valid, Please follow the rules below :
+      </p>
+      <ol class="rules list-unstyled m-0 ">
+        <li class="alert-ol-p">
+          <i class="fa-regular fa-circle-right p-2"></i>Site name must
+          contain at least 3 characters
+        </li>
+        <li class="alert-ol-p">
+          <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+          valid one
+        </li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+  <!-- start BootStrap js  -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <!-- Start Main js sheet -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
